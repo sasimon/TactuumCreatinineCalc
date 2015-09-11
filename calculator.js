@@ -10,7 +10,7 @@ function generateError(div,errorMsg,defaultHTML) {
 }
 function calculate() {
 	if ($("#age").is(":valid") && $("#age").val() != "" && $("#kg").is(":valid") && $("#kg").val() !== "" && $("#mg-dL").is(":valid") && $("#mg-dL").val() !== "") {
-		$("#results").addClass("calculated").html("Creatinine clearance level: " + ((140 - Number($("#age").val()))*kg/(72*mg_dl) * ($("#male").is(":checked") ? 1 : 0.85)).toFixed(2) + " mL/min");
+		$("#results").addClass("calculated").html("Creatinine clearance level: " + ((140 - Number($("#age").val()))*kg/(72*mg_dL) * ($("#male").is(":checked") ? 1 : 0.85)).toFixed(2) + " mL/min");
 	}
 }
 function reset() {
