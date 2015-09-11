@@ -9,7 +9,7 @@ function generateError(div,errorMsg,defaultHTML) {
 	$("#results").removeClass("calculated").html("Result will appear here once all errors are cleared.");
 }
 function calculate() {
-	if ($("#age").is(":valid") && $("#age").val() != "" && $("#kg").is(":valid") && $("#kg").val() !== "" && $("#mg-dl").is(":valid") && $("#mg-dl").val() !== "") {
+	if ($("#age").is(":valid") && $("#age").val() != "" && $("#kg").is(":valid") && $("#kg").val() !== "" && $("#mg-dL").is(":valid") && $("#mg-dL").val() !== "") {
 		$("#results").addClass("calculated").html("Creatinine clearance level: " + ((140 - Number($("#age").val()))*kg/(72*mg_dl) * ($("#male").is(":checked") ? 1 : 0.85)).toFixed(2) + " mL/min");
 	}
 }
